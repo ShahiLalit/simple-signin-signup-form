@@ -1,0 +1,102 @@
+/* Creating CSS color Variable */
+:root {
+  --color-text: #333333;
+  --color-background: #ffffff;
+  --color-bodyBG: #e0d7cd;
+}
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.wrapper {
+  display: flex;
+  background-color: var(--color-bodyBG);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 10px;
+  width: 400px; /* Width of the form container */
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 10px 20px;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+.signin-btn {
+  margin-right: 10px;
+  background: var(--color-bodyBG);
+  background: linear-gradient(
+    to right,
+    var(--color-bodyBG) 50%,
+    var(--color-background) 50%
+  );
+  background-position: left;
+  background-size: 200% 100%;
+  transition: all 0.3s ease-in;
+  /* background size decides which color in gradient takes what amount of space */
+}
+
+.signup-btn {
+  margin-left: 10px;
+  background: var(--color-background);
+  background: linear-gradient(
+    to right,
+    var(--color-background) 50%,
+    var(--color-bodyBG) 50%
+  );
+  background-position: left;
+  transition: all 0.3s ease-in;
+  background-size: 200% 100%;
+}
+
+.form-wrapper > form {
+  display: flex;
+  overflow: hidden;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease-in;
+}
+
+input {
+  padding: 10px 20px;
+  border: 2px solid var(--color-bodyBG);
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  /* width of the input  + 50px padding on left and right = 400px*/
+  width: 300px;
+}
+
+.footer-info {
+  margin-top: 20px;
+}
+
+.link {
+  margin-left: 5px;
+  text-decoration: underline;
+}
